@@ -31,6 +31,7 @@ class FilterBookList extends Component {
           <FormControl
             type="text"
             placeholder="Search"
+            value={this.state.searchTerm}
             onChange={(e) => this.searchElement(e)}
             className="mr-sm-2"
           />
