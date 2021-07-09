@@ -10,9 +10,9 @@ class FilterBookList extends Component {
 
   searchElement = (e) => {
     this.setState({
-      searchTerm: e.target.value.toLowerCase(),
-      booksSearch: this.props.books.filter(
-        (book) => book.title.toLowerCase().indexOf(this.state.searchTerm) !== -1
+      searchTerm: e.target.value,
+      booksSearch: this.props.books.filter((book) =>
+        book.title.toLowerCase().includes(this.state.searchTerm)
       ),
     });
 
